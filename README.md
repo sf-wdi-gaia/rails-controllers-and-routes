@@ -4,7 +4,7 @@ Market: SF
 
 ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
 
-# Controllers and Routes in Rails
+# Controllers and Routes
 
 ### Why is this important?
 <!-- framing the "why" in big-picture/real world examples -->
@@ -135,7 +135,7 @@ $ rails s
 Visit `http://localhost:3000/about_us` in the browser. You should see the text "hello from Rails! This is all about us..." rendered in the browser; thus, we know that the route `/about_us` rendered the method `about_us` in the controller.  These two elements, the route definition in ```routes.rb``` and the method in the controller, are linked.
 
 
-## The Resources Shortcut - Codealong (20 mins)
+## Resources
 
 Let's create another rails app:
 
@@ -144,11 +144,13 @@ Let's create another rails app:
    cd blog_routes_app
 ```
 
-To explain the concept of resourceful/restful routes, we will scaffold the Post resource:
+To explain the concept of resourceful/restful routes, we will generate the model, controller, views, and routes for the the Post resource with the scaffold command:
 
 ```
 rails g scaffold post title content
 ```
+
+>Note: Using scaffold is generally unadvised.
 
 This command will create all the MVC structure for the resource blog as well as our basic routes!
 
@@ -186,7 +188,7 @@ put    "/posts/:id"      , to: "posts#update"
 delete "/posts/:id"      , to: "posts#destroy"
 ```
 
-## Independent Practice (15 mins)
+## Independent Practice
 
 
 Re-use the application "blog" we've just created and add three routes to it manually:
